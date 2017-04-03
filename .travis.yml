@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.3.0
+script:
+- bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec -fd spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: drr5/hM8wyCxutnxgUvJ2fmWm2I55Xoqm2F/3vGPLJCt0PwyGtZBvkua6H3ZqgGwfIa3cegfHEfXTrzLoKmETyk7alMT15hgaRkVJ6pUSYZ9GqeajTLBawNVUInG60IdKHQyOzf/3+fk1UvX5BAfVEDv/p3HjnqdZyRUex7MhbY97tTQeQc2y/Cnkj9u9oMu8X5vygtLVRni3JFAen8WbxIorXnASN5g4Pq7Ywl+TmIZBTV3T00uN9/zfUa9seZEyEuNF0BwYpMQppeUJ29flMOEa3mMd1xIWH2bguGDpL4MJDhMkG46y/vjUajOckioWY0MXvDCSvMHvlV8Z+5DoCEqCt6RU8ZT0D50lvFrR5Tt+eTSKVHTplL5oKtyvkLvahixTGTy+YukWEQIf9fgCjPfWPOcMKYvuK1th5hJXP5zUQQLgYJA5ayLZf/wMKQhoLlGS3TczpAvCjIxVFMx5/pBGXRNmrN7BerTW0nicoC86aQJ6nx3iNxVQtAgp6nEtyeeGV4G2KXzAuL4btWjC0439ltCpbcGmdUb2J12mpp+haxiFAJszvW16fs9s+DLbEtSVqRze1An7UIZTu+77kVJSU8vKJ4FKZ4Fk9aiUIIMFk2lIsIQo3Tsltpb6knoBz2gAcnqghQw/+2ejxoSqxuiW00TncYyW0WZhd1Zpic=
+  app: lansessions
+  on:
+    repo: Vaalisto/lansessions
