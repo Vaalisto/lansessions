@@ -2,7 +2,7 @@
 
 <h1>Listing Games</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -15,12 +15,9 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= game.name %></td>
+        <td><%= link_to game.name, game %></td>
         <td><%= game.year %></td>
-        <td><%= game.platform %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= game.platform %></td>        
       </tr>
     <% end %>
   </tbody>

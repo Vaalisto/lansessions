@@ -18,8 +18,13 @@
 <% if @game.ratings.empty? %>
 <p>The game has not been rated yet.</p>
 <% else %>
-<p>The game has <%= @game.ratings.count %> ratings.</p>
+<p>The game has <%= pluralize(@game.ratings.count, 'rating') %> with average of <%= @game.average_rating %></p>
 <% end %>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+<h4>Rate the game:</h4>
+
+<%= form_for(@rating) do |f| %>
+	<%= f.hidden_field :game_id %>
+ 	Score: <%= f.number_field :score %>
+ 	<%= f.submit :class => "btn btn-primary btn-sm" %>
+<% end %>
