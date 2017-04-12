@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-04-09T23:12:48+03:00">2017-04-09T23:12:48+03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-04-12T14:04:24+03:00">2017-04-12T14:04:24+03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">4.56%</span></span>
+    (<span class="covered_percent"><span class="red">4.07%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -31,10 +31,10 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>12</b> files in total.
-    <b>263</b> relevant lines. 
+    <b>13</b> files in total.
+    <b>295</b> relevant lines. 
     <span class="green"><b>12</b> lines covered</span> and
-    <span class="red"><b>251</b> lines missed </span>
+    <span class="red"><b>283</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,10 +53,10 @@
       <tr>
         <td class="strong"><a href="#061c3cb027a4dbc8623119b29c60566c8c59f47b" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="red strong">0.0 %</td>
-        <td>5</td>
-        <td>5</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>5</td>
+        <td>16</td>
         <td>0.0</td>
       </tr>
       
@@ -87,6 +87,16 @@
         <td>74</td>
         <td>0</td>
         <td>74</td>
+        <td>0.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#8becc1a2734bf568743bf3bcc8b58aba19c0c643" class="src_link" title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a></td>
+        <td class="red strong">0.0 %</td>
+        <td>21</td>
+        <td>21</td>
+        <td>0</td>
+        <td>21</td>
         <td>0.0</td>
       </tr>
       
@@ -179,7 +189,7 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">1.28%</span></span>
+    (<span class="covered_percent"><span class="red">1.13%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -189,10 +199,10 @@
   </h2>
   <a name="Controllers"></a>
   <div>
-    <b>5</b> files in total.
-    <b>234</b> relevant lines. 
+    <b>6</b> files in total.
+    <b>266</b> relevant lines. 
     <span class="green"><b>3</b> lines covered</span> and
-    <span class="red"><b>231</b> lines missed </span>
+    <span class="red"><b>263</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -211,10 +221,10 @@
       <tr>
         <td class="strong"><a href="#061c3cb027a4dbc8623119b29c60566c8c59f47b" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="red strong">0.0 %</td>
-        <td>5</td>
-        <td>5</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>5</td>
+        <td>16</td>
         <td>0.0</td>
       </tr>
       
@@ -245,6 +255,16 @@
         <td>74</td>
         <td>0</td>
         <td>74</td>
+        <td>0.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#8becc1a2734bf568743bf3bcc8b58aba19c0c643" class="src_link" title="app/controllers/sessions_controller.rb">app/controllers/sessions_controller.rb</a></td>
+        <td class="red strong">0.0 %</td>
+        <td>21</td>
+        <td>21</td>
+        <td>0</td>
+        <td>21</td>
         <td>0.0</td>
       </tr>
       
@@ -533,9 +553,9 @@
     <h3>app/controllers/application_controller.rb</h3>
     <h4><span class="red">0.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
+      <b>16</b> relevant lines. 
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <span class="red"><b>16</b> lines missed.</span>
     </div>
   </div>
   
@@ -567,6 +587,72 @@
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">  helper_method :current_user</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
+          <code class="ruby">  def current_user</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">  	return nil if session[:user_id].nil?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">  	User.find(session[:user_id])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">  def ensure_that_signed_in</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">  	redirect_to signin_path, notice: &quot;You should sign in&quot; if current_user.nil?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">end</code>
@@ -1572,6 +1658,150 @@
   </pre>
 </div>
       
+        <div class="source_table" id="8becc1a2734bf568743bf3bcc8b58aba19c0c643">
+  <div class="header">
+    <h3>app/controllers/sessions_controller.rb</h3>
+    <h4><span class="red">0.0 %</span> covered</h4>
+    <div>
+      <b>21</b> relevant lines. 
+      <span class="green"><b>0</b> lines covered</span> and
+      <span class="red"><b>21</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="missed" data-hits="0" data-linenumber="1">
+          
+          
+          <code class="ruby">class SessionsController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="2">
+          
+          
+          <code class="ruby">  def new</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="3">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
+          <code class="ruby">    user = User.find_by username: params[:username]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    if user and user.authenticate(params[:password])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">      session[:user_id] = user.id if not user.nil?    </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">      redirect_to user_path(user), notice: &quot;Welcome back!&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">      redirect_to :back, notice: &quot;Check your username and/or password&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">  def destroy    </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">    session[:user_id] = nil   </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">    redirect_to :root, notice: &quot;Signed out!&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="69b30f792fb1922a4a69ab04c9b608b7f83ebc74">
   <div class="header">
     <h3>app/controllers/users_controller.rb</h3>
@@ -2015,7 +2245,7 @@
         <li class="missed" data-hits="0" data-linenumber="72">
           
           
-          <code class="ruby">      params.require(:user).permit(:username, :password_digest)</code>
+          <code class="ruby">      params.require(:user).permit(:username, :password, :password_confirmation)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="73">
