@@ -26,7 +26,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null
       ],
@@ -40,27 +40,27 @@
         null
       ],
       "/home/wadror/lansessions/app/models/rating.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
       ],
       "/home/wadror/lansessions/app/models/user.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null
       ],
       "/home/wadror/lansessions/app/controllers/ratings_controller.rb": [
         0,
@@ -334,6 +334,6 @@
         0
       ]
     },
-    "timestamp": 1491995064
+    "timestamp": 1492856918
   }
 }
