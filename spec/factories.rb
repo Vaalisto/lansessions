@@ -11,6 +11,12 @@ FactoryGirl.define do
 		platform "Xbox"
 	end
 
+	factory :game2 do
+		name "Doom"
+		year 1993
+		platform "PC"
+	end
+
 	factory :rating do
 		score 9
 	end
