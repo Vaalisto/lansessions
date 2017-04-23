@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Partyname:</strong>
+  <%= @lanparty.partyname %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @lanparty.startdate %>
+</p>
+
+<p>
+  <strong>Endtime:</strong>
+  <%= @lanparty.endtime %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lanparty.description %>
+</p>
+
+<%= link_to 'Edit', edit_lanparty_path(@lanparty) %> |
+<%= link_to 'Back', lanparties_path %>

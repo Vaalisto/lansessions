@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Lanparties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Partyname</th>
+      <th>Startdate</th>
+      <th>Endtime</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lanparties.each do |lanparty| %>
+      <tr>
+        <td><%= lanparty.partyname %></td>
+        <td><%= lanparty.startdate %></td>
+        <td><%= lanparty.endtime %></td>
+        <td><%= lanparty.description %></td>
+        <td><%= link_to 'Show', lanparty %></td>
+        <td><%= link_to 'Edit', edit_lanparty_path(lanparty) %></td>
+        <td><%= link_to 'Destroy', lanparty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lanparty', new_lanparty_path %>
