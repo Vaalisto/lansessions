@@ -3,8 +3,14 @@
 <h1>Listing Lanparties</h1>
 
 <div class="simple-calendar">
-  <%= month_calendar(attribute: :startdate, end_attribute: :enddate) do |date| %>
+  <%= month_calendar events: @lanparties do |date, lanparties| %>
     <%= date %>
+
+    <% lanparties.each do |party| %>
+      <div>
+        <%= party.partyname %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 

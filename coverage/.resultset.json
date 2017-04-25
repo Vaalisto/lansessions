@@ -48,6 +48,14 @@
         1,
         1,
         1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/home/wadror/lansessions/app/models/rating.rb": [
@@ -422,6 +430,6 @@
         0
       ]
     },
-    "timestamp": 1492953860
+    "timestamp": 1493151532
   }
 }
