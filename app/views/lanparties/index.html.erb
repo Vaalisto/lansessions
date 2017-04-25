@@ -2,12 +2,18 @@
 
 <h1>Listing Lanparties</h1>
 
-<table>
+<div class="simple-calendar">
+  <%= month_calendar(attribute: :startdate, end_attribute: :enddate) do |date| %>
+    <%= date %>
+  <% end %>
+</div>
+
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Partyname</th>
       <th>Startdate</th>
-      <th>Endtime</th>
+      <th>Enddate</th>
       <th>Description</th>
       <th colspan="3"></th>
     </tr>
@@ -18,7 +24,7 @@
       <tr>
         <td><%= lanparty.partyname %></td>
         <td><%= lanparty.startdate %></td>
-        <td><%= lanparty.endtime %></td>
+        <td><%= lanparty.enddate %></td>
         <td><%= lanparty.description %></td>
         <td><%= link_to 'Show', lanparty %></td>
         <td><%= link_to 'Edit', edit_lanparty_path(lanparty) %></td>
@@ -30,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Lanparty', new_lanparty_path %>
+<%= link_to 'New Lanparty', new_lanparty_path, :class => "btn btn-primary" %>
