@@ -1,3 +1,5 @@
+<%= javascript_include_tag "datepicker" %>
+
 <%= form_for(@lanparty) do |f| %>
   <% if @lanparty.errors.any? %>
     <div id="error_explanation">
@@ -20,22 +22,33 @@
     <%= f.label :address %><br>
     <%= f.text_field :address, class: 'form-control' %>
   </div>
+
   <div class="field">
     <%= f.label :city %><br>
     <%= f.text_field :city, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :startdate %><br>
-    <%= f.datetime_select :startdate %>
+
+  <div class="form-group">
+    <%= f.label :startdate %>
+    <div class="input-group date" id="datetimepicker1">
+      <%= f.text_field :startdate, class: 'form-control' %>
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :enddate %><br>
-    <%= f.datetime_select :enddate %>
+
+  <div class="form-group">
+    <%= f.label :enddate %>
+    <div class="input-group date" id="datetimepicker2">
+      <%= f.text_field :enddate, class: 'form-control' %>
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
   </div>
+  
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description, class: 'form-control' %>
   </div>
+
   <div class="actions">    
       <%= f.submit :class => "btn btn-primary" %>    
   </div>
