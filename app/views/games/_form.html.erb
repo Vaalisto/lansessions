@@ -11,19 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
+  <%= bootstrap_form_for(@game) do |f| %>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br>
     <%= f.number_field :year %>
-  </div>
-  <div class="field">
-    <%= f.label :platform %><br>
     <%= f.text_field :platform %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit "Create Game" %>
+  <% end %>
+  
 <% end %>

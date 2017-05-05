@@ -3,6 +3,14 @@
     "coverage": {
       "/home/wadror/lansessions/app/helpers/application_helper.rb": [
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/home/wadror/lansessions/app/helpers/games_helper.rb": [
@@ -113,8 +121,8 @@
         1,
         null,
         1,
-        25,
-        23,
+        26,
+        24,
         null,
         null,
         1,
@@ -430,6 +438,6 @@
         0
       ]
     },
-    "timestamp": 1493238433
+    "timestamp": 1494012261
   }
 }

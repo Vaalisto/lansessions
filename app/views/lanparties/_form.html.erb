@@ -13,43 +13,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :partyname %>    
-    <%= f.text_field :partyname, class: 'form-control' %>    
-  </div>
+  <%= bootstrap_form_for(@lanparty) do |f| %>
+    <%= f.text_field :partyname %>
+    <%= f.text_field :address %>
+    <%= f.text_field :city %>
+    <%= f.datetime_picker :startdate %>
+    <%= f.datetime_picker :enddate %>
+    <%= f.text_area :description %>
+    <%= f.submit "Create Lanpary" %>
+  <% end %>
 
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address, class: 'form-control' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :startdate %>
-    <div class="input-group date" id="datetimepicker1">
-      <%= f.text_field :startdate, class: 'form-control' %>
-      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :enddate %>
-    <div class="input-group date" id="datetimepicker2">
-      <%= f.text_field :enddate, class: 'form-control' %>
-      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-    </div>
-  </div>
-  
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: 'form-control' %>
-  </div>
-
-  <div class="actions">    
-      <%= f.submit :class => "btn btn-primary" %>    
-  </div>
 <% end %>
