@@ -13,3 +13,4 @@ deploy:
   app: lansessions
   on:
     repo: Vaalisto/lansessions
+  run: rake db:migrate
