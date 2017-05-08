@@ -1,24 +1,35 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Partyname:</strong>
-  <%= @lanparty.partyname %>
+<dl class="dl-horizontal">
+	<dt>Name:</dt>
+	<dd><%= @lanparty.partyname %></dd>
+	<dt>Starting time:</dt>
+	<dd><%= @lanparty.startdate %></dd>
+	<dt>Ending time:</dt>
+	<dd><%= @lanparty.enddate %></dd>
+</dl>
 </p>
 
 <p>
-  <strong>Startdate:</strong>
-  <%= @lanparty.startdate %>
+	<strong>Description:</strong>
+	<div class="well">  	
+  	<%= @lanparty.description %>
+  	</div>
 </p>
 
-<p>
-  <strong>Endtime:</strong>
-  <%= @lanparty.enddate %>
-</p>
+<% if current_user and not @lanparty.users.include? current_user %>
+	<%= form_for(@participant) do |f| %>
+		<%= f.hidden_field :lanparty_id %>
+		<%= f.submit class:"btn btn-primary", value:"Attend" %>
+	<% end %>
+<% end %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @lanparty.description %>
-</p>
+<% if current_user and @lanparty.users.include? current_user %>
+	<%= form_for(@participant, method: "delete") do |f| %>
+		<%= f.hidden_field :lanparty_id %>
+		<%= f.submit class:"btn btn-danger", value:"Leave" %>
+	<% end %>
+<% end %>
 
-<%= link_to 'Edit', edit_lanparty_path(@lanparty) %> |
-<%= link_to 'Back', lanparties_path %>
+<br>
+
+<%= edit_and_destroy_buttons(@lanparty) %>

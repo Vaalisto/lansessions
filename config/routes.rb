@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   resources :users
   resources :ratings
   resources :games
+  resources :participants
   resource :session, only: [:new, :create, :destroy]
+
+
 
   root 'games#index'
   

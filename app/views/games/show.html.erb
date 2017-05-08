@@ -1,19 +1,15 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Name:</strong>
-  <%= @game.name %>
+<dl class="dl-horizontal">
+	<dt>Name: </dt>
+	<dd><%= @game.name %></dd>
+	<dt>Year: </dt>
+	<dd><%= @game.year %></dd>
+	<dt>Platform: </dt>
+	<dd><%= @game.platform %></dd>
+</dl>
 </p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @game.year %>
-</p>
-
-<p>
-  <strong>Platform:</strong>
-  <%= @game.platform %>
-</p>
+<br>
 
 <% if @game.ratings.empty? %>
 <p>The game has not been rated yet.</p>
@@ -21,12 +17,12 @@
 <p>The game has <%= pluralize(@game.ratings.count, 'rating') %> with average of <%= @game.average_rating %></p>
 <% end %>
 
-<h4>Rate the game:</h4>
-
 <%= form_for(@rating) do |f| %>
 	<%= f.hidden_field :game_id %>
- 	Score: <%= f.number_field :score %>
+ 	<%= f.number_field :score %>
  	<%= f.submit :class => "btn btn-primary btn-sm" %>
 <% end %>
+
+<br>
 
 <%= edit_and_destroy_buttons(@game) %>

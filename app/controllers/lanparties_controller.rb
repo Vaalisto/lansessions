@@ -11,6 +11,12 @@ class LanpartiesController < ApplicationController
   # GET /lanparties/1
   # GET /lanparties/1.json
   def show
+    if current_user and current_user.lanparties.include? @lanparty
+      @participant = Participant.where("user_id = ? and lanparty_id = ?", current_user.id, @lanparty.id).first
+    else
+      @participant = Participant.new
+      @participant.lanparty = @lanparty
+    end
   end
 
   # GET /lanparties/new

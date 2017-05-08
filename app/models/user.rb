@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 	has_many :ratings, dependent: :destroy
 	has_many :games, through: :ratings
+	has_many :participants, dependent: :destroy
+	has_many :lanparties, through: :participants
 
 	has_secure_password
 
