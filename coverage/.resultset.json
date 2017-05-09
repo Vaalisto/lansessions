@@ -296,6 +296,10 @@
         0,
         0
       ],
+      "/home/wadror/lansessions/app/models/partygame.rb": [
+        0,
+        0
+      ],
       "/home/wadror/lansessions/app/controllers/participants_controller.rb": [
         0,
         0,
@@ -499,9 +503,10 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
-    "timestamp": 1494278118
+    "timestamp": 1494362947
   }
 }

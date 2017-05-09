@@ -11,6 +11,7 @@ class LanpartiesController < ApplicationController
   # GET /lanparties/1
   # GET /lanparties/1.json
   def show
+    @participants = Participant.where(lanparty_id: @lanparty.id)
     if current_user and current_user.lanparties.include? @lanparty
       @participant = Participant.where("user_id = ? and lanparty_id = ?", current_user.id, @lanparty.id).first
     else
