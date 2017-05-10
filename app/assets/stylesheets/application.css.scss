@@ -9,18 +9,21 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
- *= require_tree .
- *= require_self
+ * 
  */
 
 @import 'bootstrap-sprockets';
+@import 'bootswatch/superhero/variables';
 @import 'bootstrap';
 @import 'bootstrap-datetimepicker';
 @import 'jquery-ui';
 @import 'simple_calendar';
 @import 'rails_bootstrap_forms';
+body { padding-top: 60px; }
+@import 'bootswatch/superhero/bootswatch';
 
 .dl-horizontal dt { text-align: left; width:auto }
 .dl-horizontal dd { margin-left: 100px; width:auto }
 .row { margin-left: -5px }
+.main{ background-color: blue; }
+
