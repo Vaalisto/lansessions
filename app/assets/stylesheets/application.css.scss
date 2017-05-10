@@ -19,7 +19,10 @@
 @import 'jquery-ui';
 @import 'simple_calendar';
 @import 'rails_bootstrap_forms';
+@import 'chosen';
+
 body { padding-top: 60px; }
+
 @import 'bootswatch/superhero/bootswatch';
 
 .dl-horizontal dt { text-align: left; width:auto }

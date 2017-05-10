@@ -39,6 +39,20 @@
 <% else %>
 <% end %>
 
+<h4>Games</h4>
+<% if @lanparty.games.any? %>
+	<div class="row">
+	<p>
+		<ul class="list-group col-md-4">
+			<% @games.each do |g| %>
+			<li class="list-group-item"><%= link_to g.game.username, g.game %></li>
+			<% end %>
+		</ul>
+	</p>
+	</div>
+<% else %>
+<% end %>
+
 
 <div class="row">
 <p>

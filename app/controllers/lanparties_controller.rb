@@ -12,6 +12,7 @@ class LanpartiesController < ApplicationController
   # GET /lanparties/1.json
   def show
     @participants = Participant.where(lanparty_id: @lanparty.id)
+    @games = Partygame.where(lanparty_id: @lanparty.id)
     if current_user and current_user.lanparties.include? @lanparty
       @participant = Participant.where("user_id = ? and lanparty_id = ?", current_user.id, @lanparty.id).first
     else
@@ -23,16 +24,23 @@ class LanpartiesController < ApplicationController
   # GET /lanparties/new
   def new
     @lanparty = Lanparty.new
+    get_games    
   end
 
   # GET /lanparties/1/edit
-  def edit
+  def edit    
   end
 
   # POST /lanparties
   # POST /lanparties.json
   def create
     @lanparty = Lanparty.new(lanparty_params)
+
+    params[:games].each do |game|
+      if !game.empty?
+        @lanparty.partygames.build(:game_id => game)
+      end
+    end
 
     respond_to do |format|
       if @lanparty.save
@@ -77,6 +85,11 @@ class LanpartiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lanparty_params
-      params.require(:lanparty).permit(:partyname, :address, :city, :startdate, :enddate, :description)
+      params.require(:lanparty).permit(:partyname, :address, :city, :startdate, :enddate, :description, :games_attributes => [:id, :name])
+    end
+
+    def get_games
+      @all_games = Game.all
+      @party_game = @lanparty.partygames.build
     end
 end

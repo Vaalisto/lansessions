@@ -20,6 +20,7 @@
     <%= f.datetime_picker :startdate %>
     <%= f.datetime_picker :enddate %>
     <%= f.text_area :description %>
+    <%= f.collection_select(:games, @all_games, :id, :name, {}, {:multiple => true}) %>
     <%= f.submit "Create Lanpary" %>
   <% end %>
 
