@@ -3,3 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
 	$('#lanparty_game_ids').chosen()
+
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
