@@ -34,13 +34,7 @@ class LanpartiesController < ApplicationController
   # POST /lanparties
   # POST /lanparties.json
   def create
-    @lanparty = Lanparty.new(lanparty_params)
-
-    params[:games].each do |game|
-      if !game.empty?
-        @lanparty.partygames.build(:game_id => game)
-      end
-    end
+    @lanparty = Lanparty.new(lanparty_params)    
 
     respond_to do |format|
       if @lanparty.save
@@ -85,7 +79,7 @@ class LanpartiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lanparty_params
-      params.require(:lanparty).permit(:partyname, :address, :city, :startdate, :enddate, :description, :games_attributes => [:id, :name])
+      params.require(:lanparty).permit(:partyname, :address, :city, :startdate, :enddate, :description, :game_ids => [])
     end
 
     def get_games

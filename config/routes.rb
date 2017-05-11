@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :lanparties  
+  resources :lanparties do
+  	resources :games
+  end
   resources :users
   resources :ratings
   resources :games

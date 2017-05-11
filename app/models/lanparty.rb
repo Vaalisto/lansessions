@@ -3,7 +3,7 @@ class Lanparty < ActiveRecord::Base
 	has_many :users, through: :participants
 	has_many :partygames, dependent: :destroy
 	has_many :games, through: :partygames
-	accepts_nested_attributes_for :games
+	accepts_nested_attributes_for :partygames
 
 	validates :partyname, presence: true
 	validates :address, presence: true

@@ -45,7 +45,7 @@
 	<p>
 		<ul class="list-group col-md-4">
 			<% @games.each do |g| %>
-			<li class="list-group-item"><%= link_to g.game.username, g.game %></li>
+			<li class="list-group-item"><%= link_to g.game.name, g.game %></li>
 			<% end %>
 		</ul>
 	</p>
