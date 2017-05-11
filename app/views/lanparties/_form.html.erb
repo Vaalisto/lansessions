@@ -19,9 +19,9 @@
     <%= f.text_field :city %>
     <%= f.datetime_picker :startdate %>
     <%= f.datetime_picker :enddate %>
-    <%= f.text_area :description %>
-    <%= f.collection_select(:game_ids, Game.all, :id, :name, {}, { :multiple => true }) %>
-    <%= f.submit "Create Lanpary" %>
+    <%= f.text_area :description %>    
+    <%= f.collection_select :game_ids, Game.all, :id, :name, { label: "Games" }, { :multiple => true } %>
+    <%= f.submit "Submit" %>
   <% end %>
 
 <% end %>

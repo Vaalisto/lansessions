@@ -18,4 +18,5 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require chosen-jquery
+//= require twitter/bootstrap/rails/confirm
 //= require_tree .

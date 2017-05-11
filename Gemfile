@@ -21,6 +21,7 @@ gem 'bootstrap_form'
 gem 'bootstrap_form-datetimepicker'
 gem 'bootswatch-rails'
 gem 'chosen-rails'
+gem 'twitter-bootstrap-rails-confirm'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
