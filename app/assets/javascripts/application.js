@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
@@ -19,5 +18,4 @@
 //= require bootstrap-datetimepicker
 //= require chosen-jquery
 //= require twitter/bootstrap/rails/confirm
-//= require turbolinks
 //= require_tree .
