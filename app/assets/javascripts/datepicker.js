@@ -1,4 +1,4 @@
-$( document ).on('turbolinks:load',function () {
+$( document ).ready(function () {
     $('.bootstrap_form-datetimepicker').datetimepicker({
     	format: 'YYYY-MM-DD HH:mm'
     });
