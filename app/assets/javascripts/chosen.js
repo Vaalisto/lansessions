@@ -1,3 +1,3 @@
-jQuery(document).ready(function(){
-    jQuery("#lanparty_game_ids").chosen();
+$(document).ready(function(){
+    $("#lanparty_game_ids").chosen();
 });
