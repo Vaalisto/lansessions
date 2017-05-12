@@ -5,7 +5,7 @@ class LanpartiesController < ApplicationController
   # GET /lanparties
   # GET /lanparties.json
   def index
-    @lanparties = Lanparty.all
+    @lanparties = Lanparty.order(:startdate)
   end
 
   # GET /lanparties/1
@@ -23,8 +23,7 @@ class LanpartiesController < ApplicationController
 
   # GET /lanparties/new
   def new
-    @lanparty = Lanparty.new
-    get_games    
+    @lanparty = Lanparty.new       
   end
 
   # GET /lanparties/1/edit
@@ -80,10 +79,5 @@ class LanpartiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def lanparty_params
       params.require(:lanparty).permit(:partyname, :address, :city, :startdate, :enddate, :description, :game_ids => [])
-    end
-
-    def get_games
-      @all_games = Game.all
-      @party_game = @lanparty.partygames.build
-    end
+    end    
 end

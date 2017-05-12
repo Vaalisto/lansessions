@@ -20,7 +20,7 @@
     <%= f.datetime_picker :startdate %>
     <%= f.datetime_picker :enddate %>
     <%= f.text_area :description %>    
-    <%= f.collection_select :game_ids, Game.all, :id, :name, { label: "Games" }, { :multiple => true } %>
+    <%= f.collection_select :game_ids, Game.order(:name), :id, :name, { label: "Games" }, { :multiple => true } %>
     <%= f.submit "Submit" %>
   <% end %>
 
