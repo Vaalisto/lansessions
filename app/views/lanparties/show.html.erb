@@ -1,20 +1,22 @@
 <%= javascript_include_tag "confirm" %>
 
 <div class="row">
-<p>
-<dl class="dl-horizontal">
-	<dt>Name:</dt>
-	<dd><%= @lanparty.partyname %></dd>
-	<dt>Address:</dt>
-	<dd><%= @lanparty.address %>, <%= @lanparty.city %></dd>
-	<dt>Starting time:</dt>
-	<dd><%= @lanparty.startdate %></dd>
-	<dt>Ending time:</dt>
-	<dd><%= @lanparty.enddate %></dd>
-</dl>
-</p>
+	<p>
+		<dl class="dl-horizontal col-sm-5">
+			<dt>Name:</dt>
+			<dd><%= @lanparty.partyname %></dd>
+			<dt>Address:</dt>
+			<dd><%= @lanparty.address %>, <%= @lanparty.city %></dd>
+			<dt>Starting time:</dt>
+			<dd><%= @lanparty.startdate %></dd>
+			<dt>Ending time:</dt>
+			<dd><%= @lanparty.enddate %></dd>
+		</dl>
+	</p>
+
 </div>
 
+<iframe src="<%= @lanparty.gmaps_url %>" width="600" height="400"></iframe>
 
 <div class="row">
 	<p>
@@ -30,48 +32,50 @@
 <h4>Participants</h4>
 <% if @lanparty.users.any? %>
 	<div class="row">
-	<p>
-		<ul class="list-group col-md-4">
-			<% @participants.each do |p| %>
-			<li class="list-group-item"><%= link_to p.user.username, p.user %></li>
-			<% end %>
-		</ul>
-	</p>
+		<p>
+			<ul class="list-group col-md-4">
+				<% @participants.each do |p| %>
+				<li class="list-group-item"><%= link_to p.user.username, p.user %></li>
+				<% end %>
+			</ul>
+		</p>
 	</div>
 <% else %>
+	<p>No participants</p>
 <% end %>
 
 <h4>Games</h4>
 <% if @lanparty.games.any? %>
 	<div class="row">
-	<p>
-		<ul class="list-group col-md-4">
-			<% @games.each do |g| %>
-			<li class="list-group-item"><%= link_to g.game.name, g.game %></li>
-			<% end %>
-		</ul>
-	</p>
+		<p>
+			<ul class="list-group col-md-4">
+				<% @games.each do |g| %>
+				<li class="list-group-item"><%= link_to g.game.name, g.game %></li>
+				<% end %>
+			</ul>
+		</p>
 	</div>
 <% else %>
+	<p>No games</p>
 <% end %>
 
 
 <div class="row">
-<p>
-<% if current_user and not @lanparty.users.include? current_user %>
-	<%= form_for(@participant) do |f| %>
-		<%= f.hidden_field :lanparty_id %>
-		<%= f.submit class:"btn btn-primary btn-sm", value:"Participate" %>
-	<% end %>
-<% end %>
+	<p>
+		<% if current_user and not @lanparty.users.include? current_user %>
+			<%= form_for(@participant) do |f| %>
+				<%= f.hidden_field :lanparty_id %>
+				<%= f.submit class:"btn btn-primary btn-sm", value:"Participate" %>
+			<% end %>
+		<% end %>
 
-<% if current_user and @lanparty.users.include? current_user %>
-	<%= form_for(@participant, method: "delete") do |f| %>
-		<%= f.hidden_field :lanparty_id %>
-		<%= f.submit class:"btn btn-danger btn-sm", value:"Leave" %>
-	<% end %>
-<% end %>
-</p>
+		<% if current_user and @lanparty.users.include? current_user %>
+			<%= form_for(@participant, method: "delete") do |f| %>
+				<%= f.hidden_field :lanparty_id %>
+				<%= f.submit class:"btn btn-danger btn-sm", value:"Leave" %>
+			<% end %>
+		<% end %>
+	</p>
 </div>
 <br>
 

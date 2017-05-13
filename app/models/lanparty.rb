@@ -16,4 +16,12 @@ class Lanparty < ActiveRecord::Base
 	def end_time
 		self.enddate
 	end
+
+	def address_line
+		ERB::Util.url_encode("#{address} #{city}")
+	end
+
+	def gmaps_url
+		"//www.google.com/maps/embed/v1/place?q=#{address_line}&zoom=17&key=#{ENV['GOOGLE_API']}"
+	end
 end

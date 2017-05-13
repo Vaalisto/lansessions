@@ -5,23 +5,23 @@ FactoryGirl.define do
 		password_confirmation "Kallensalis1"
 	end
 
-	factory :game do
+	factory :game, class: Game do
 		name "Halo"
 		year 1999
 		platform "Xbox"
 	end
 
-	factory :game2 do
+	factory :game2, class: Game do
 		name "Doom"
 		year 1993
 		platform "PC"
 	end
 
-	factory :rating do
+	factory :rating, class: Rating do
 		score 9
 	end
 
-	factory :rating2 do
+	factory :rating2, class: Rating do
 		score 8
 	end
 end
