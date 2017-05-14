@@ -1,7 +1,9 @@
 # Lansessions
 
-Webpalvelinohjelmointi: Ruby on Rails -projektityö
+Webpalvelinohjelmointi: Ruby on Rails -projektityö, Ville Vaalisto
 
 ### Aihe
 
-Ohjelman avulla voidaan pitää kirjaa erilaisista videopeleistä, antaa niille arvioita ja pitää kirjaa yhteisistä pelisessioista esimerkiksi LAN-partyissä. Voidaan siis dokumentoida pelaajien mietteitä peleistä silloisella pelikerralla.
+Ohjelman avulla voidaan pitää kirjaa erilaisista videopeleistä, antaa niille arvioita ja pitää luodu lanparty-tapahtumia, joihin käyttäjät voivat ilmoittautua ja listata niissä pelattavat pelit.
+
+[Wiki-sivut](https://github.com/Vaalisto/lansessions/wiki)
