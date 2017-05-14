@@ -2,8 +2,8 @@
 
 Webpalvelinohjelmointi: Ruby on Rails -projektityö, Ville Vaalisto
 
-### Aihe
+Heroku: https://lansessions.herokuapp.com/
 
-Ohjelman avulla voidaan pitää kirjaa erilaisista videopeleistä, antaa niille arvioita ja pitää luodu lanparty-tapahtumia, joihin käyttäjät voivat ilmoittautua ja listata niissä pelattavat pelit.
+[![Build Status](https://travis-ci.org/Vaalisto/lansessions.png)](https://travis-ci.org/Vaalisto/lansessions)
 
 [Wiki-sivut](https://github.com/Vaalisto/lansessions/wiki)

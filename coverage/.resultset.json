@@ -138,8 +138,8 @@
         1,
         null,
         1,
-        69,
-        63,
+        72,
+        66,
         null,
         null,
         1,
@@ -148,6 +148,7 @@
         null
       ],
       "/home/wadror/lansessions/app/controllers/users_controller.rb": [
+        1,
         1,
         1,
         null,
@@ -489,6 +490,6 @@
         0
       ]
     },
-    "timestamp": 1494751845
+    "timestamp": 1494791366
   }
 }

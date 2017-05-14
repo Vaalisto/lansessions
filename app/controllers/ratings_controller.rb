@@ -1,5 +1,5 @@
 class RatingsController < ApplicationController    
-
+  before_action :ensure_that_signed_in, only: [:new, :edit, :update, :destroy]
   
   def new
     @rating = Rating.new

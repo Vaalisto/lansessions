@@ -18,13 +18,13 @@
 <% else %>
 <p>The game has <%= pluralize(@game.ratings.count, 'rating') %> with average of <%= @game.average_rating %></p>
 <% end %>
-
-<%= form_for(@rating) do |f| %>
-	<%= f.hidden_field :game_id %>
- 	<%= f.number_field :score %>
- 	<%= f.submit :class => "btn btn-primary btn-sm" %>
+<% if not current_user.nil? %>
+	<%= form_for(@rating) do |f| %>
+		<%= f.hidden_field :game_id %>
+	 	<%= f.number_field :score %>
+	 	<%= f.submit :class => "btn btn-primary btn-sm" %>
+	<% end %>
 <% end %>
-
 <br>
 
 <%= edit_and_destroy_buttons(@game) %>

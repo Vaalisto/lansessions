@@ -12,9 +12,15 @@
   <% end %>
 
   <%= bootstrap_form_for(@game) do |f| %>
-    <%= f.text_field :name %>
-    <%= f.number_field :year %>
-    <%= f.text_field :platform %>
+    <div class="row">
+      <%= f.text_field :name, wrapper: { class: 'col-xs-3' } %>
+    </div>
+    <div class="row">
+      <%= f.number_field :year, wrapper: { class: 'col-xs-3' } %>
+    </div>
+    <div class="row">
+      <%= f.text_field :platform, wrapper: { class: 'col-xs-3' } %>
+    </div>
     <%= f.submit "Submit" %>
   <% end %>
   

@@ -14,13 +14,33 @@
   <% end %>
 
   <%= bootstrap_form_for(@lanparty) do |f| %>
-    <%= f.text_field :partyname %>
-    <%= f.text_field :address %>
-    <%= f.text_field :city %>
-    <%= f.datetime_picker :startdate %>
-    <%= f.datetime_picker :enddate %>
-    <%= f.text_area :description %>    
-    <%= f.collection_select :game_ids, Game.order(:name), :id, :name, { label: "Games" }, { :multiple => true } %>
+    
+    <div class="row">      
+      <%= f.text_field :partyname, wrapper: { class: 'col-xs-3' } %>
+    </div>
+
+    <div class="row">
+      <%= f.text_field :address, wrapper: { class: 'col-xs-3' } %>
+    </div>
+
+    <div class="row">
+    <%= f.text_field :city, wrapper: { class: 'col-xs-3' } %>
+    </div>
+    <div class="row">
+    <%= f.datetime_picker :startdate, wrapper: { class: 'col-xs-3' } %>
+    </div>
+    <div class="row">
+    <%= f.datetime_picker :enddate, wrapper: { class: 'col-xs-3' } %>
+    </div>
+    <div class="row">
+    <%= f.text_area :description, wrapper: { class: 'col-xs-6' } %>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <%= f.collection_select :game_ids, Game.order(:name), :id, :name, { label: "Games" }, { :multiple => true }  %>
+      </div>
+    </div>
     <%= f.submit "Submit" %>
   <% end %>
 

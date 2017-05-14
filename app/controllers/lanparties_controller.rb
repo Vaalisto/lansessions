@@ -1,6 +1,6 @@
 class LanpartiesController < ApplicationController
   before_action :set_lanparty, only: [:show, :edit, :update, :destroy]
-  before_action :ensure_that_signed_in, expect: [:index, :show, :list]
+  before_action :ensure_that_signed_in, only: [:new, :edit, :update, :destroy]
 
   # GET /lanparties
   # GET /lanparties.json
